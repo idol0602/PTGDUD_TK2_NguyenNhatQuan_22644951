@@ -1,0 +1,104 @@
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-item.has-submenu::after {
+    content: "▾";
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    /* Add transition for smooth effect */
+}
+
+.submenu li:hover {
+    background-color: red;
+    /* Red background on hover */
+    color: white;
+    /* White text on hover for better contrast */
+}
+
+
+/* Style for the "Tuyển sinh Đại học" header */
+
+.submenu.tuyensinh-submenu .submenu-header {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+/* Style for the other "TUYỂN SINH" submenu items */
+
+.submenu.tuyensinh-submenu li {
+    padding: 10px 20px;
+}
+
+
+/* Ensure the header doesn't get the red hover effect */
+
+.submenu.tuyensinh-submenu .submenu-header:hover {
+    color: white;
+    background-color: red;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
