@@ -1,0 +1,58 @@
+.navbar {
+    background-color: #0047AB;
+    /* Match the blue background */
+    color: white;
+    padding: 10px;
+    /* Adjust overall padding */
+    width: 250px;
+    /* Adjust width as needed */
+    border: 1px solid #ADD8E6;
+    /* Light blue border around the whole component */
+}
+
+.navbar-title {
+    font-size: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-item {
+    padding: 12px 15px;
+    /* Adjust vertical padding for items */
+    border-bottom: 1px solid #ADD8E6;
+    /* Lighter border for item separation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-item:last-child {
+    border-bottom: none;
+}
+
+.navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.arrow {
+    background-color: #D3D3D3;
+    /* Light gray background for the arrow */
+    color: #555;
+    /* Darker color for the arrow itself */
+    padding: 5px 8px;
+    /* Padding around the arrow */
+    border-radius: 3px;
+    /* Slightly rounded corners for the arrow background */
+    font-size: 0.8em;
+    /* Adjust arrow size */
+}
