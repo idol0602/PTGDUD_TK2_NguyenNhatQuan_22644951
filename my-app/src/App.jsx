@@ -6,6 +6,8 @@ import InfoSection from './components/InfoSection'; // Import the InfoSection co
 import Contact from "./components/Contact"
 import './App.css';
 import Footer from './components/Footer';
+import NewsSection from './components/NewsSection';
+
 
 function App() {
     const sliderImages = [
@@ -18,6 +20,7 @@ function App() {
             <Header />
             <Slider images={sliderImages} />
             <Navbar />
+            <NewsSection></NewsSection>
             <InfoSection /> {/* Use the InfoSection component */}
             {/* Your other content */}
             <Contact></Contact>

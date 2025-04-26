@@ -1,0 +1,128 @@
+.news-section-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    /* Spacing between the columns */
+}
+
+.news-column {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-sizing: border-box;
+    width: calc(50% - 30px);
+    /* Two columns on larger screens with gap */
+}
+
+.wide-column {
+    width: 100%;
+    /* Full width for the columns with images */
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-header h3 {
+    color: #d9534f;
+    /* Red color for the titles */
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.news-header a.view-all {
+    color: #777;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.news-header a.view-all:hover {
+    text-decoration: underline;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-title {
+    flex-grow: 1;
+    color: #333;
+}
+
+.news-date {
+    color: #777;
+    font-size: 0.85em;
+    margin-left: 10px;
+}
+
+.news-new {
+    background-color: #d9534f;
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.news-item-with-image {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.news-item-with-image img {
+    max-width: 200px;
+    /* Adjust as needed */
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.news-item-with-image p {
+    color: #333;
+    line-height: 1.4;
+}
+
+.news-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item p {
+    color: #333;
+    line-height: 1.4;
+}
+
+
+/* Responsive layout for smaller screens */
+
+@media (max-width: 768px) {
+    .news-column {
+        width: 100%;
+    }
+}
