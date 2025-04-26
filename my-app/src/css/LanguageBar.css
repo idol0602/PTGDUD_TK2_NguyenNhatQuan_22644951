@@ -1,0 +1,48 @@
+.language-bar {
+    background-color: #1a237e;
+    /* Dark blue background */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.left-section p {
+    margin: 0;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section p {
+    margin: 0 5px;
+}
+
+.separator {
+    color: #ccc;
+    /* Light gray separator */
+}
+
+.flag {
+    font-size: 1.2em;
+    /* Adjust flag size */
+    margin-left: 5px;
+}
+
+
+/* Optional: Style specifically for Vietnamese flag */
+
+.vn-flag {
+    /* You could add specific styles if needed */
+}
+
+
+/* Optional: Style specifically for English flag */
+
+.en-flag {
+    /* You could add specific styles if needed */
+}

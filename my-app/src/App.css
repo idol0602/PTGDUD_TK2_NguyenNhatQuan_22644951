@@ -1,0 +1,78 @@
+/* App.css */
+
+.App {
+    display: flex;
+    flex-direction: column;
+    /* Ensure other components stack vertically */
+}
+
+.horizontal-section {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    /* Distribute space between Navbar and NewsSection */
+    align-items: flex-start;
+    /* Align items to the top */
+    width: 100%;
+    padding: 0 20px;
+    /* Add some horizontal padding around the section */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.navbar-container {
+    /* Adjust width as needed, e.g., 30% */
+    flex: 0 0 auto;
+    /* Don't grow, don't shrink, base width auto */
+    margin-right: 20px;
+    /* Add some space between Navbar and NewsSection */
+}
+
+.news-section-container {
+    /* Adjust width as needed, e.g., 70% */
+    flex: 1 1 auto;
+    /* Allow to grow and shrink, base width auto */
+}
+
+
+/* You might need to adjust the styles for Navbar and NewsSection themselves */
+
+
+/* depending on their current CSS */
+
+
+/* Example adjustments for Navbar (if it's full width by default) */
+
+nav {
+    /* Remove full width if it exists */
+    /* width: 100%; */
+}
+
+
+/* Example adjustments for NewsSection (if it needs to be more compact) */
+
+.news-section-container {
+    /* Adjust padding or margins if needed */
+    /* padding: 10px; */
+}
+
+
+/* For smaller screens, make them stack vertically */
+
+@media (max-width: 768px) {
+    .horizontal-section {
+        flex-direction: column;
+        align-items: stretch;
+        /* Make them take full width */
+    }
+    .navbar-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Add some vertical space */
+    }
+    .news-section-container {
+        width: 100%;
+    }
+}

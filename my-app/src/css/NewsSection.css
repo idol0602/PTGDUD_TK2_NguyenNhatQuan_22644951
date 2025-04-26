@@ -1,3 +1,5 @@
+/* NewsSection.css */
+
 .news-section-container {
     display: flex;
     flex-wrap: wrap;
@@ -11,13 +13,10 @@
     border: 1px solid #ddd;
     padding: 15px;
     box-sizing: border-box;
-    width: calc(50% - 30px);
-    /* Two columns on larger screens with gap */
-}
-
-.wide-column {
-    width: 100%;
-    /* Full width for the columns with images */
+    width: calc(50% - 20px);
+    /* Two columns on larger screens */
+    margin-bottom: 20px;
+    /* Add vertical spacing between rows */
 }
 
 .news-header {
@@ -124,5 +123,6 @@
 @media (max-width: 768px) {
     .news-column {
         width: 100%;
+        /* One column on smaller screens */
     }
 }

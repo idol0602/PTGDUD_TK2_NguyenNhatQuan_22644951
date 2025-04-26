@@ -3,7 +3,7 @@ import '../css/Navbar.css'; // Create this CSS file
 
 function Navbar() {
     return (
-        <div className="navbar">
+        <div className="navbar" >
             <h2 className="navbar-title">CƠ CẤU TỔ CHỨC</h2>
             <ul className="navbar-list">
                 <li className="navbar-item">

@@ -7,6 +7,7 @@ import Contact from "./components/Contact"
 import './App.css';
 import Footer from './components/Footer';
 import NewsSection from './components/NewsSection';
+import LanguageBar from './components/LanguageBar';
 
 
 function App() {
@@ -17,10 +18,13 @@ function App() {
 
     return (
         <div>
+            <LanguageBar></LanguageBar>
             <Header />
             <Slider images={sliderImages} />
+            <div style={{display:"flex"}}>
             <Navbar />
             <NewsSection></NewsSection>
+            </div>
             <InfoSection /> {/* Use the InfoSection component */}
             {/* Your other content */}
             <Contact></Contact>

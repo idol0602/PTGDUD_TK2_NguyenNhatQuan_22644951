@@ -1,21 +1,25 @@
+/* Navbar.css */
+
 .navbar {
     background-color: #0047AB;
-    /* Match the blue background */
+    /* Blue background */
     color: white;
-    padding: 10px;
-    /* Adjust overall padding */
-    width: 250px;
-    /* Adjust width as needed */
-    border: 1px solid #ADD8E6;
-    /* Light blue border around the whole component */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    /* Add some padding at the bottom */
 }
 
 .navbar-title {
+    margin: 0;
+    padding: 15px;
     font-size: 1.3em;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    text-align: center;
     font-weight: bold;
+    text-align: left;
+    /* Align title to the left */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Separator line */
 }
 
 .navbar-list {
@@ -25,34 +29,63 @@
 }
 
 .navbar-item {
-    padding: 12px 15px;
-    /* Adjust vertical padding for items */
-    border-bottom: 1px solid #ADD8E6;
-    /* Lighter border for item separation */
+    padding: 10px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    /* Light gray separator lines */
+    background-color: #f9f9f9;
+    /* Light background for items */
+    color: #333;
+    /* Dark text color for items */
 }
 
 .navbar-item:last-child {
     border-bottom: none;
+    /* Remove border from the last item */
 }
 
 .navbar-item a {
-    color: white;
+    color: #333;
     text-decoration: none;
-    font-size: 0.95em;
+    font-size: 1em;
+    flex-grow: 1;
+    /* Allow text to take up available space */
+}
+
+.navbar-item a:hover {
+    text-decoration: underline;
 }
 
 .arrow {
-    background-color: #D3D3D3;
-    /* Light gray background for the arrow */
-    color: #555;
-    /* Darker color for the arrow itself */
+    background-color: #cccccc;
+    /* Gray background for arrow */
+    color: #333;
+    /* Dark text color for arrow */
     padding: 5px 8px;
-    /* Padding around the arrow */
     border-radius: 3px;
-    /* Slightly rounded corners for the arrow background */
-    font-size: 0.8em;
-    /* Adjust arrow size */
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+/* Remove blue background and white text for list items */
+
+.navbar-list .navbar-item {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar-list .navbar-item a {
+    color: #333;
+}
+
+
+/* Style the title to have white text on blue background */
+
+.navbar-title {
+    background-color: #0047AB;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
