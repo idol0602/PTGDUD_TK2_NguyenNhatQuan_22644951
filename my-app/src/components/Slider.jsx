@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Slider.css';
 
-function Slider({ images }) {
+function Slider({ images, autoSlideInterval = 3000 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        let intervalId;
+        if (images && images.length > 1 && autoSlideInterval > 0) {
+            intervalId = setInterval(() => {
+                goToNext();
+            }, autoSlideInterval);
+        }
+
+        return () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+        };
+    }, [images, autoSlideInterval]);
 
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -18,8 +33,9 @@ function Slider({ images }) {
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
                 className="slider-image"
+                style={{height: "50vh"}}
             />
-            {images.length > 1 && (
+            {images && images.length > 1 && (
                 <>
                     <button className="slider-button prev" onClick={goToPrevious}>
                         &lt;
