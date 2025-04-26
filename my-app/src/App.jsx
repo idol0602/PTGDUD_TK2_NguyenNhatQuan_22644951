@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Slider from './components/Slider';
 import Navbar from './components/Navbar';
 import InfoSection from './components/InfoSection'; // Import the InfoSection component
+import Contact from "./components/Contact"
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Navbar />
             <InfoSection /> {/* Use the InfoSection component */}
             {/* Your other content */}
+            <Contact></Contact>
         </div>
     );
 }
